@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  box-sizing: border-box;
+  font-size: 16px; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+figure,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; }
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Space Mono", monospace;
+  background-color: #c5e4e7; }
+
+.wrapper {
+  margin: 0 auto; }
+  @media (min-width: 1024px) {
+    .wrapper {
+      max-width: 960px; } }
+
+.attribution {
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  margin-top: 2rem; }
+
+.logo {
+  margin: 3rem auto; }
+
+.tip {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 960px; }
+  @media (min-width: 768px) {
+    .tip {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 3rem;
+      padding: 2rem; } }
+  .tip .tip__form-bill {
+    position: relative; }
+  .tip .tip__form-tip {
+    margin-top: 1.5rem; }
+    .tip .tip__form-tip .wrapper-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 0.7rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem; }
+      @media (min-width: 768px) {
+        .tip .tip__form-tip .wrapper-buttons {
+          grid-template-columns: repeat(3, 1fr); } }
+      .tip .tip__form-tip .wrapper-buttons .button {
+        background-color: #00494d;
+        border: none;
+        border-radius: 0.2rem;
+        text-align: center;
+        padding: 0.5rem 0;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: white;
+        font-family: "Space Mono", monospace;
+        text-transform: "capitalize";
+        width: "auto";
+        margin-top: "0px";
+        cursor: pointer;
+        transition: all 0.2s ease-in-out; }
+        .tip .tip__form-tip .wrapper-buttons .button:hover {
+          background-color: #26c0ab;
+          color: #00494d; }
+        .tip .tip__form-tip .wrapper-buttons .button:disabled {
+          opacity: 0.2; }
+      .tip .tip__form-tip .wrapper-buttons .button-custom {
+        background-color: #f4fafa;
+        border: none;
+        border-radius: 0.2rem;
+        outline: none;
+        text-align: right;
+        font-family: "Space Mono", monospace;
+        font-weight: 700;
+        color: #7f9c9f;
+        font-size: 1rem;
+        padding: 0.5rem 1rem 0.5rem;
+        min-width: 100px; }
+  .tip .tip__form-people {
+    position: relative; }
+  .tip .tip__form-title {
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+    color: #7f9c9f; }
+  .tip .tip__form-input {
+    position: relative;
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: #f4fafa;
+    text-align: right;
+    color: #7f9c9f;
+    font-family: "Space Mono", monospace;
+    font-size: 1rem;
+    outline: none; }
+  .tip .tip__form-img {
+    position: absolute;
+    top: 3rem;
+    left: 1rem; }
+  .tip .tip__result {
+    background-color: #00494d;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem; }
+    @media (min-width: 768px) {
+      .tip .tip__result {
+        margin-top: 0;
+        padding: 1rem; } }
+    .tip .tip__result-amount {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem; }
+      @media (min-width: 768px) {
+        .tip .tip__result-amount {
+          margin-bottom: 1.5rem;
+          min-width: 350px; } }
+    .tip .tip__result-title {
+      display: flex;
+      flex-wrap: wrap;
+      width: 120px;
+      font-size: 1.1rem;
+      color: white; }
+      .tip .tip__result-title span {
+        font-weight: 400;
+        color: #7f9c9f;
+        font-size: 1rem; }
+    .tip .tip__result-output {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #26c0ab; }
+      @media (min-width: 768px) {
+        .tip .tip__result-output {
+          font-size: 3rem; } }
+    .tip .tip__result .button.reset {
+      background-color: #26c0ab;
+      border: none;
+      border-radius: 0.2rem;
+      text-align: center;
+      padding: 0.5rem 0;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #00494d;
+      font-family: "Space Mono", monospace;
+      text-transform: uppercase;
+      width: 100%;
+      margin-top: 3rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out; }
+      .tip .tip__result .button.reset:hover {
+        background-color: #c5e4e7;
+        color: #00494d; }
+      .tip .tip__result .button.reset:disabled {
+        opacity: 0.2; }
+
+/*# sourceMappingURL=styles.css.map */

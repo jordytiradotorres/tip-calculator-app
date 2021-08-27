@@ -1,0 +1,50 @@
+@mixin mq($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else if type-of($breakpoint) == number and unit($breakpoint) == "px" {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if(type-of($breakpoint) == number and unit($breakpoint) == "em") {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin button($bgc, $color, $textTransform, $width, $marginTop, $hover) {
+  // background-color: ${(props) =>
+  //   props.reset ? "hsl(172, 67%, 45%)" : "hsl(183, 100%, 15%)"};
+  background-color: $bgc;
+  border: none;
+  border-radius: 0.2rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  // color: ${(props) =>
+  //   props.reset ? "hsl(183, 100%, 15%)" : "hsl(0, 0%, 100%)"};
+  color: $color;
+  font-family: $font-space-mono;
+  // text-transform: ${(props) => (props.reset ? "uppercase" : "capitalize")};
+  text-transform: $textTransform;
+  // width: ${(props) => (props.large ? "100%" : "auto")};
+  width: $width;
+  // margin-top: ${(props) => (props.reset ? "3rem" : "0px")};
+  margin-top: $marginTop;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    // background-color: ${(props) =>
+    //   props.reset ? "hsl(185, 41%, 84%)" : "hsl(172, 67%, 45%)"};
+    background-color: $hover;
+    color: $very-dark-cyan;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+  }
+}

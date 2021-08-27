@@ -1,0 +1,155 @@
+.logo {
+  margin: 3rem auto;
+}
+
+.tip {
+  background: $white;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 960px;
+
+  @include mq(medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    padding: 2rem;
+  }
+
+  .tip__form {
+    &-bill {
+      position: relative;
+    }
+
+    &-tip {
+      margin-top: 1.5rem;
+
+      .wrapper-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 0.7rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+
+        @include mq(medium) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .button {
+          @include button(
+            $very-dark-cyan,
+            $white,
+            "capitalize",
+            "auto",
+            "0px",
+            $strong-cyan
+          );
+        }
+
+        .button-custom {
+          background-color: $light-grayish-cyan;
+          border: none;
+          border-radius: 0.2rem;
+          outline: none;
+          text-align: right;
+          font-family: $font-space-mono;
+          font-weight: 700;
+          color: $dark-grayish-cyan;
+          font-size: 1rem;
+          padding: 0.5rem 1rem 0.5rem;
+          min-width: 100px;
+        }
+      }
+    }
+
+    &-people {
+      position: relative;
+    }
+
+    &-title {
+      font-weight: 400;
+      margin-bottom: 0.25rem;
+      color: $dark-grayish-cyan;
+    }
+
+    &-input {
+      position: relative;
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 0.25rem;
+      border: none;
+      background-color: $light-grayish-cyan;
+      text-align: right;
+      color: $dark-grayish-cyan;
+      font-family: $font-space-mono;
+      font-size: 1rem;
+      // margin-bottom: ${(props) => props.dollar && "2rem"};
+      outline: none;
+    }
+
+    &-img {
+      position: absolute;
+      top: 3rem;
+      left: 1rem;
+    }
+  }
+
+  .tip__result {
+    background-color: $very-dark-cyan;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+
+    @include mq(medium) {
+      margin-top: 0;
+      padding: 1rem;
+    }
+
+    &-amount {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      @include mq(medium) {
+        margin-bottom: 1.5rem;
+        min-width: 350px;
+      }
+    }
+
+    &-title {
+      display: flex;
+      flex-wrap: wrap;
+      width: 120px;
+      font-size: 1.1rem;
+      color: $white;
+
+      span {
+        font-weight: 400;
+        color: $dark-grayish-cyan;
+        font-size: 1rem;
+      }
+    }
+
+    &-output {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $strong-cyan;
+
+      @include mq(medium) {
+        font-size: 3rem;
+      }
+    }
+
+    .button.reset {
+      @include button(
+        $strong-cyan,
+        $very-dark-cyan,
+        uppercase,
+        100%,
+        3rem,
+        $light-grayish-cyann
+      );
+    }
+  }
+}
