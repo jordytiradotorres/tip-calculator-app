@@ -54,12 +54,18 @@
               <button class="button" type="button">15%</button>
               <button class="button" type="button">25%</button>
               <button class="button" type="button">50%</button>
-              <input class="button-custom" type="text" placeholder="Custom" />
+              <input
+                class="button-custom"
+                type="number"
+                min="0"
+                placeholder="Custom"
+              />
             </div>
           </div>
 
           <div class="tip__form-people">
             <h3 class="tip__form-title">Number of People</h3>
+            <p class="error">Can't be Zero</p>
             <input
               class="tip__form-input"
               type="number"
@@ -76,20 +82,29 @@
         </div>
       </section>
       <section class="tip__result">
-        <div class="wrapper">
+        <div class="tip__result-wrapper">
           <div class="tip__result-amount">
             <h3 class="tip__result-title">Tip Amount <span>/ person</span></h3>
             <output class="tip__result-output">$0.00</output>
           </div>
           <div class="tip__result-amount">
             <h3 class="tip__result-title">Total <span>/ person</span></h3>
-            <output class="tip__result-output">$0.00</output>
+            <output class="tip__result-output amount-total">$0.00</output>
           </div>
 
           <button class="button reset" type="reset">reset</button>
         </div>
       </section>
     </main>
+
+    <!-- <form
+      onsubmit="return false"
+      oninput="rr.value = parseInt(a.value) + parseInt(b.value)"
+    >
+      <input type="number" name="a" />
+      <input type="number" name="b" />
+      <output for="a b" name="rr"></output>
+    </form> -->
 
     <!-- footer -->
     <div class="attribution">

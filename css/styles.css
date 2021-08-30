@@ -92,10 +92,11 @@ body {
         cursor: pointer;
         transition: all 0.2s ease-in-out; }
         .tip .tip__form-tip .wrapper-buttons .button:hover {
-          background-color: #26c0ab;
+          background-color: #c5e4e7;
           color: #00494d; }
-        .tip .tip__form-tip .wrapper-buttons .button:disabled {
-          opacity: 0.2; }
+        .tip .tip__form-tip .wrapper-buttons .button[disabled="true"] {
+          opacity: 0.2;
+          cursor: initial; }
       .tip .tip__form-tip .wrapper-buttons .button-custom {
         background-color: #f4fafa;
         border: none;
@@ -110,6 +111,12 @@ body {
         min-width: 100px; }
   .tip .tip__form-people {
     position: relative; }
+    .tip .tip__form-people .error {
+      color: #c43131;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: none; }
   .tip .tip__form-title {
     font-weight: 400;
     margin-bottom: 0.25rem;
@@ -139,6 +146,10 @@ body {
       .tip .tip__result {
         margin-top: 0;
         padding: 1rem; } }
+    .tip .tip__result-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%; }
     .tip .tip__result-amount {
       display: flex;
       justify-content: space-between;
@@ -183,7 +194,12 @@ body {
       .tip .tip__result .button.reset:hover {
         background-color: #c5e4e7;
         color: #00494d; }
-      .tip .tip__result .button.reset:disabled {
-        opacity: 0.2; }
+      .tip .tip__result .button.reset[disabled="true"] {
+        opacity: 0.2;
+        cursor: initial; }
+      @media (min-width: 768px) {
+        .tip .tip__result .button.reset {
+          margin-top: auto;
+          margin-bottom: 1rem; } }
 
 /*# sourceMappingURL=styles.css.map */

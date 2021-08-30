@@ -42,7 +42,7 @@
             "capitalize",
             "auto",
             "0px",
-            $strong-cyan
+            $light-grayish-cyann
           );
         }
 
@@ -64,6 +64,14 @@
 
     &-people {
       position: relative;
+
+      .error {
+        color: $color-error;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+      }
     }
 
     &-title {
@@ -103,6 +111,12 @@
     @include mq(medium) {
       margin-top: 0;
       padding: 1rem;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     &-amount {
@@ -150,6 +164,11 @@
         3rem,
         $light-grayish-cyann
       );
+
+      @include mq(medium) {
+        margin-top: auto;
+        margin-bottom: 1rem;
+      }
     }
   }
 }
